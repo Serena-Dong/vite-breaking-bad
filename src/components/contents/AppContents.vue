@@ -11,7 +11,7 @@ export default {
 
     <div class="card">
         <a href="">
-            <img :src="content." :alt="content.type">
+            <img src="" alt="">
             <p>{{}}</p>
             <h2></h2>
             <p><em>da</em></p>
@@ -22,13 +22,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/scss/partials/variables' as *;
-
 a {
     color: white;
 
     &:hover {
-        color: $dc_blue;
+        color: grey;
     }
 }
 
@@ -42,7 +40,7 @@ a {
         height: 180px;
 
         &:hover {
-            border: $dc_blue 2px solid;
+            border: grey 2px solid;
         }
     }
 

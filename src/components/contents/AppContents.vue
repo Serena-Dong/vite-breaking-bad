@@ -11,9 +11,11 @@ export default {
 
     <div class="card">
         <a href="">
-            <img :src="content.thumb" :alt="content.type">
+            <img :src="content." :alt="content.type">
+            <p>{{}}</p>
+            <h2></h2>
+            <p><em>da</em></p>
 
-            <p>{{ content.series }}</p>
         </a>
     </div>
 

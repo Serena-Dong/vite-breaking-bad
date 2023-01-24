@@ -2,7 +2,7 @@
 export default {
     name: 'AppContents',
     props: {
-        content: Object
+        creature: Object
     }
 }
 </script>
@@ -11,10 +11,10 @@ export default {
 
     <div class="card">
         <a href="">
-            <img src="" alt="">
-            <p>{{}}</p>
+            <img :src=creature.imageUrl alt="">
+            <p></p>
             <h2></h2>
-            <p><em>da</em></p>
+            <p><em></em></p>
 
         </a>
     </div>

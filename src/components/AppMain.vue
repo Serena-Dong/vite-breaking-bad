@@ -1,7 +1,14 @@
 <script>
-import AppContents from './contents/AppContents.vue'
+import CreaturesCard from './contents/CreaturesCard.vue';
+import { store } from '../data/store';
+
 export default {
-    components: { AppContents }
+    components: { CreaturesCard },
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 
@@ -11,7 +18,8 @@ export default {
             <div class="container">
                 <div class="row">
 
-                    <AppContents v-for="content in contents" :key="content.series" :content="content"></AppContents>
+                    <CreaturesCard v-for="creature in store.creatures" :key="creature._id" :creature="creature">
+                    </CreaturesCard>
 
                 </div>
             </div>

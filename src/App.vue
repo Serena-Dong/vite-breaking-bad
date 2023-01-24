@@ -1,6 +1,6 @@
 <script>
 import axios from 'axios';
-import { store } from './data/store'
+import { store } from './data/store';
 
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
@@ -14,15 +14,15 @@ export default {
         }
     },
     methods: {
-        fetchCharacters(url) {
+        fetchCreatures(url) {
             axios.get(url)
                 .then(res => {
-                    store.characters = res.data.docs
+                    store.creatures = res.data.docs
                 })
         }
     },
     created() {
-        this.fetchCharacters(store.apiUri)
+        this.fetchCreatures(store.apiUri)
     }
 }
 </script>

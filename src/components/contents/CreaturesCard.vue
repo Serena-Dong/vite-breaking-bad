@@ -9,43 +9,65 @@ export default {
 
 <template>
 
-    <div class="card">
-        <a href="">
-            <img :src=creature.imageUrl alt="">
-            <p></p>
-            <h2></h2>
-            <p><em></em></p>
+    <a href="">
+        <div class="card">
+            <div class="img-box">
+                <img :src=creature.imageUrl :alt=creature.name>
+            </div>
+            <div class="text">
+                <p>#{{ creature.serial }}</p>
+                <h2>{{ creature.name }}</h2>
+                <p><em>{{ creature.type1 }}</em></p>
+            </div>
 
-        </a>
-    </div>
+        </div>
+    </a>
 
 </template>
 
 <style lang="scss" scoped>
 a {
-    color: white;
+    color: black;
+
 
     &:hover {
-        color: grey;
+        color: rgb(0, 126, 0)
     }
 }
 
 .card {
-    width: 180px;
-    height: 270px;
+    width: 200px;
+    height: 350px;
+    padding: 1rem 0 1rem;
 
-    img {
-        object-fit: cover;
-        width: 180px;
-        height: 180px;
+    margin-bottom: 2rem;
+    background-color: rgb(255, 255, 255);
 
-        &:hover {
-            border: grey 2px solid;
+
+
+    .img-box {
+        display: flex;
+        justify-content: center;
+
+        img {
+            border-radius: 10rem;
+            object-fit: cover;
+            width: 180px;
+            height: 180px;
+
+            &:hover {
+                border: grey 2px solid;
+            }
         }
     }
 
-    p {
-        margin: 1rem 0 1rem
+    .text {
+        margin-left: 1rem;
+
+        p {
+            margin: 1rem 0 1rem
+        }
     }
+
 }
 </style>

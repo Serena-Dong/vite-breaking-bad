@@ -18,7 +18,7 @@ export default {
             <div class="container">
                 <div class="row">
 
-                    <CreaturesCard v-for="creature in store.creatures" :key="creature._id" :creature="creature">
+                    <CreaturesCard v-for="creature in store.creatures" :key="creature.name" :creature="creature">
                     </CreaturesCard>
 
                 </div>
@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 .contents {
-    background-color: rgb(154, 154, 154);
+    background-color: rgb(26, 26, 26);
     min-height: 150px;
     padding: 3rem;
 

@@ -4,7 +4,10 @@
 
 <template>
     <form action="">
-        <input type="text" placeholder="Cerca per il suo tipo">
+        <select name="" id="">
+            <option value="">fe</option>
+
+        </select>
         <button type="submit">Cerca</button>
     </form>
 </template>
@@ -16,7 +19,7 @@ form {
     align-items: center;
 }
 
-input {
+select {
     width: 15rem;
     height: 2rem;
     padding: 1rem;

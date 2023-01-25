@@ -1,10 +1,9 @@
 <script>
 import CreaturesCard from './contents/CreaturesCard.vue';
-import SearchingFeature from './contents/SearchingFeature.vue';
 import { store } from '../data/store';
 
 export default {
-    components: { CreaturesCard, SearchingFeature },
+    components: { CreaturesCard },
     data() {
         return {
             store
@@ -15,10 +14,7 @@ export default {
 
 <template>
     <main>
-        <div class="searching-bar">
-            <SearchingFeature>
-            </SearchingFeature>
-        </div>
+
         <div class="contents">
             <div class="container">
                 <div class="row">

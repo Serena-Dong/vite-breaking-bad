@@ -1,12 +1,19 @@
 <script>
+import { storetwo } from '../../data/store';
 
+export default {
+    data() {
+        return {
+            storetwo
+        }
+    }
+}
 </script>
 
 <template>
     <form action="">
         <select name="" id="">
-            <option value="">fe</option>
-
+            <option v-for="(kind, i ) in storetwo.types" value="">{{ kind }}</option>
         </select>
         <button type="submit">Cerca</button>
     </form>

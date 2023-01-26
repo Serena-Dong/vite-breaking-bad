@@ -1,4 +1,14 @@
-<script setup>
+<script>
+import selectedOption from '../components/contents/selectedOption.vue';
+
+export default {
+    components: { selectedOption },
+    methods: {
+        onFilterChange(selectedOption) {
+            console.log(selectedOption)
+        }
+    }
+}
 
 </script>
 
@@ -8,6 +18,9 @@
             <div class="logo">
                 <img src="../assets/img/International_Pokémon_logo.svg.png" alt="">
             </div>
+        </div>
+        <div class="filter">
+            <selectedOption @option-change="onFilterChange"></selectedOption>
         </div>
     </header>
 </template>

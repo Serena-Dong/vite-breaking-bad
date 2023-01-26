@@ -4,23 +4,24 @@ import { storetwo } from '../../data/store';
 export default {
     data() {
         return {
-            storetwo
+            storetwo,
+            selectedOption: ''
         }
     }
 }
 </script>
 
 <template>
-    <form action="">
-        <select name="" id="">
-            <option v-for="(kind, i ) in storetwo.types" value="">{{ kind }}</option>
+    <div>
+        <select v-model="selectedOption" @change="$emit('option-change', selectedOption)">
+            <option value=""> Select a ... </option>
+            <option v-for="option in storetwo.types" :key="option" :value="option">{{ option }}</option>
         </select>
-        <button type="submit">Cerca</button>
-    </form>
+    </div>
 </template>
 
-<style>
-form {
+<style lang="scss" scoped>
+div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,9 +30,10 @@ form {
 select {
     width: 15rem;
     height: 2rem;
-    padding: 1rem;
+
     border-radius: 10px;
     margin-right: 5px;
+
 
 }
 

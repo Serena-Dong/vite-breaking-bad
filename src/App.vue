@@ -5,23 +5,13 @@ import { storetwo } from './data/store';
 
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-import SearchingFeature from './components/contents/SearchingFeature.vue';
 
 export default {
-    components: { AppHeader, AppMain, SearchingFeature },
+    components: { AppHeader, AppMain },
     data() {
         return {
             store,
-            storetwo,
-            searchType: ''
-        }
-    },
-    computed: {
-        typeFilter() {
-            return store.creatures.filter(creature => {
-                creature.include(this.searchType)
-                return creature
-            })
+            storetwo
         }
     },
     methods: {
@@ -47,10 +37,6 @@ export default {
 
 <template>
     <AppHeader></AppHeader>
-    <div class="searching-bar">
-        <SearchingFeature>
-        </SearchingFeature>
-    </div>
     <AppMain></AppMain>
 </template>
 

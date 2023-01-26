@@ -3,11 +3,7 @@ import selectedOption from '../components/contents/selectedOption.vue';
 
 export default {
     components: { selectedOption },
-    methods: {
-        onFilterChange(selectedOption) {
-            console.log(selectedOption)
-        }
-    }
+    emits: ['filter-change']
 }
 
 </script>
@@ -20,7 +16,7 @@ export default {
             </div>
         </div>
         <div class="filter">
-            <selectedOption @option-change="onFilterChange"></selectedOption>
+            <selectedOption @option-change="$emit('filter-change', $event)"></selectedOption>
         </div>
     </header>
 </template>

@@ -15,7 +15,7 @@ export default {
         }
     },
     methods: {
-        fetchCreatures(url) {
+        fetchCreatures(url = apiUri) {
             axios.get(url)
                 .then(res => {
                     store.creatures = res.data.docs
@@ -26,6 +26,10 @@ export default {
                 .then(res => {
                     storetwo.types = res.data
                 })
+        },
+        filterCreatures(type) {
+            const url = type ? `https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?eq[type1]=${type}` : store.apiUri;
+            this.fetchCreatures(url)
         }
     },
     created() {
@@ -36,7 +40,7 @@ export default {
 </script>
 
 <template>
-    <AppHeader></AppHeader>
+    <AppHeader @filter-change="filterCreatures"></AppHeader>
     <AppMain></AppMain>
 </template>
 
